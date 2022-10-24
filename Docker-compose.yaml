@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   zookeeper-server:
-    image: bitnami/zookeeper:latest
+    image: bitnami/zookeeper:3.8.0
     restart: always
     ports:
       - '2181:2181'
@@ -16,7 +16,7 @@ services:
       - ZOO_SERVER_PASSWORDS=kafka_password
 
   kafka:
-    image: bitnami/kafka
+    image: bitnami/kafka:3.3.1
     restart: always
     networks:
       - kafka-bridge
@@ -36,7 +36,7 @@ services:
       - KAFKA_ZOOKEEPER_USER=kafka
 
   kafka-ui:
-    image: provectuslabs/kafka-ui
+    image: provectuslabs/kafka-ui:a2e87cc8d5ba21e2b01f2f240926298f382db63c
     container_name: kafka-ui
     ports:
       - "9090:8080"
