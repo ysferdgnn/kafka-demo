@@ -3,9 +3,10 @@
 
 ## Getting Started
 This spring boot application implements kafka streams as consumer and producer.
+Producer send data to kafka. Consumer consumes data from kafka. 
 
 
-##Technologies
+## Technologies
 - **Docker version 20.10.17**
 - **Spring Boot 2.7.5**
 - **JDK 17**
@@ -17,4 +18,16 @@ This spring boot application implements kafka streams as consumer and producer.
 
 ## Before You Run
 Be sure docker engine installed. 
-run this command in master project(kafka-demo): **docker-compose up -d**
+run this command in master project(kafka-demo): ```docker-compose up -d```
+
+## Endpoints
+```
+- POST  /message
+```
+## How To Run
+- Run ProducerApplication project
+- Run ConsumerApplication project
+- Post a data to endpoint
+- Look at the consumer application console :)
+
+
